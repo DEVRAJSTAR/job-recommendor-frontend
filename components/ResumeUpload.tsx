@@ -159,7 +159,7 @@ async function extractTextFromPDF(uint8Array: Uint8Array): Promise<string> {
     const arrayBuffer = uint8Array.buffer;
     
     // Use enhanced PDF parser
-    const parsedResume = await parseResumeFromBuffer(arrayBuffer);
+    const parsedResume = await parseResumeFromBuffer(uint8Array.buffer as ArrayBuffer);
     
     // If the extraction is too short, provide a fallback message
     if (parsedResume.text.length < 100) {
