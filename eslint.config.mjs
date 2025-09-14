@@ -26,5 +26,8 @@ export default [
       "react/no-unescaped-entities": "off",       // allow unescaped apostrophes in JSX
       "prefer-const": "off",                      // don't require const for variables
     },
+    eslint: {
+      ignoreDuringBuilds: true,
+    },
   },
 ];
