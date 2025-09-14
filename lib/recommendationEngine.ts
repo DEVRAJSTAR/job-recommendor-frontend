@@ -521,14 +521,6 @@ function getMockAnalysisResult(experience: string): AnalysisResult {
     .filter(job => job.existingSkills.length > 0)
     .slice(0, 2);
   
-  // If no trending jobs match, provide default ones
-  if (trendingJobList.length === 0) {
-    trendingJobList.push(
-      trendingJobs['AI Engineer'],
-      trendingJobs['Cybersecurity Specialist']
-    );
-  }
-  
   return {
     directFitJobs,
     trendingJobs: trendingJobList,
