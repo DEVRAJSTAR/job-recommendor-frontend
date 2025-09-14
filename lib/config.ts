@@ -5,7 +5,9 @@ export const API_CONFIG = {
 };
 
 // API Request/Response Types
-// Note: API expects form data with 'description' field, not JSON
+export interface APIRequest {
+  description: string;
+}
 
 export interface APIResponse {
   recommendations?: string; // JSON string containing the actual recommendations (old format)
